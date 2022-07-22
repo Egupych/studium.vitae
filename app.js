@@ -86,40 +86,6 @@ function setScrollIntoView6Options(top) {
 	});
 }
 
-//::::::::::::::::::::::::::::::::::::::::::::::::::
-// Кастомный курсор
-//::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-// const cursor1 = document.querySelector(".cursor1");
-// document.addEventListener("mousemove", (e) => {
-//   cursor1.style.left= e.pageX+"px";
-//   cursor1.style.top= e.pageY+"px";
-// })
-
-// const cursor2 = document.querySelector(".cursor2");
-// document.addEventListener("mousemove", (e) => {
-//   cursor2.style.left= e.pageX+"px";
-//   cursor2.style.top= e.pageY+"px";
-// })
-
-// const cursor3 = document.querySelector(".cursor3");
-// document.addEventListener("mousemove", (e) => {
-//   cursor3.style.left= e.pageX+"px";
-//   cursor3.style.top= e.pageY+"px";
-// })
-
-// const cursor4 = document.querySelector(".cursor4");
-// document.addEventListener("mousemove", (e) => {
-//   cursor4.style.left= e.pageX+"px";
-//   cursor4.style.top= e.pageY+"px";
-// })
-
-
-//::::::::::::::::::::::::::::::::::::::::::::::::::
-// Анимация появлении текста, фото
-//::::::::::::::::::::::::::::::::::::::::::::::::::
-
 const animItems = document.querySelectorAll("._anim-items");
 
 if (animItems.length>0) {
@@ -178,27 +144,3 @@ function clearActiveClasses() {
   });
 }
 
-
-//::::::::::::::::::::::::::::::::::::::::::::::::::
-// Инерция скрола страницы (доработать)
-//::::::::::::::::::::::::::::::::::::::::::::::::::
-
-// let y = 0
-
-// document.body.addEventListener('wheel', (e) => {
-//     const height = document.body.offsetHeight
-
-//     y = y + e.wheelDeltaY
-  
-//     if(y < -height + window.innerHeight) {
-//       y = -height + window.innerHeight
-//     }
-  
-//     if(y > 0) {
-//       y = 0
-//     }
-  
-//     const tr = `translateY(${y}px)`
-//     document.body.style.transform = tr
-
-// })"
