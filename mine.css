@@ -1,0 +1,1011 @@
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Обнуление                                        */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+  }
+  *,
+  *:before,
+  *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  :focus,
+  :active {
+	outline: none;
+  }
+  a:focus,
+  a:active {
+	outline: none;
+  }
+  
+  nav,
+  footer,
+  header,
+  aside {
+	display: block;
+  }
+  
+  html {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow-x:hidden;
+  }
+
+  body {
+	width: 100%;
+	font-size: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow-x:hidden;
+  }
+  
+  
+  input,
+  button,
+  textarea {
+	font-family: inherit;
+  }
+  
+  input::-ms-clear {
+	display: none;
+  }
+  button {
+	cursor: pointer;
+  }
+  button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+  }
+  a,
+  a:visited {
+	text-decoration: none;
+  }
+  a:hover {
+	text-decoration: none;
+  }
+  ul li {
+	list-style: none;
+  }
+
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+	font-size: inherit;
+	font-weight: 400;
+  }
+  
+  .bigred {
+	font-size: 20px;
+	color: red;
+  }
+
+  
+  * {
+	color: rgb(20, 20, 20);
+  }
+
+
+body {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.4vw;
+	/*user-select: none;  Не даёт взаимодействовать с текстом */
+}
+
+
+header {
+	display: flex;
+	justify-content: center; 
+	/*background: rgb(2,0,36);
+background: rgb(2,0,36);
+	background: -moz-linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(27,104,129,1) 0%, rgba(186,139,107,1) 81%);
+	background: -webkit-linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(27,104,129,1) 0%, rgba(186,139,107,1) 81%);
+	background: linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(27,104,129,1) 0%, rgba(186,139,107,1) 81%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#ba8b6b",GradientType=1); */
+        background: linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(27,104,129,1) 0%, rgba(186,139,107,1) 51%);
+	/* animation: gradient 7s ease infinite; */
+	position: relative;
+}
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Навигация                                        */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+nav {
+	font-size: 1.1vw;
+	height: 3.2vw;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	position: fixed;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	user-select: none;
+}
+
+.logo {
+	font-family: "Dancing Script", cursive;
+	font-size: 2vw;
+	margin-left: 6vw;
+	cursor: pointer;
+}
+
+
+.links {
+	display: flex;
+	margin-right: 6vw;
+	cursor: pointer;
+}
+
+.link {
+	margin-left: 3vw;
+	position: relative;
+	overflow: hidden;
+	padding: 0.5vw 0;
+}
+
+
+.linkline {
+	position: absolute;
+	display: block;
+}
+
+.link:after {
+	content: "";
+	position: absolute;
+	bottom: 0.15vw;
+	right: 0;
+	width: 0%;
+	height: 0.105vw;
+	background: rgb(56, 56, 56);
+	transition: all 0.32s cubic-bezier(.47,.17,.3,1);
+}
+
+.link:hover:after {
+	left: 0;
+	width: 100%;
+}
+
+.linkWhite {
+	margin-left: 3vw;
+	position: relative;
+	overflow: hidden;
+	padding: 0.5vw 0;
+	cursor: pointer;
+}
+
+.linkWhite:after {
+	content: "";
+	position: absolute;
+	bottom: 0.7vw;
+	right: 0;
+	width: 0%;
+    height: 2px;
+    background: rgb(255 255 255);
+	transition: all 0.32s cubic-bezier(.47,.17,.3,1);
+}
+
+.linkWhite:hover:after {
+	left: 0;
+	width: 100%;
+}
+
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Титульный слайд                                  */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.offer {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-evenly;
+	margin-top: 3.2vw;
+}
+
+@keyframes gradient {
+0% {
+	background-position: 0% 50%;
+}
+50% {
+	background-position: 100% 50%;
+}
+100% {
+	background-position: 0% 50%;
+}
+}
+
+  
+.photo {
+	width: 40%;
+	margin-top: 1.8vw;
+/* 	padding:2vw 0vw 1.4vw 2vw; */
+}
+
+
+h1 {
+	padding-left: 6vw;
+	color: white;
+	line-height: 1.5em;
+	font-size: 2.5vw;
+/* 	transform: translate(0px, 50%);
+	opacity: 0;
+	transition: all 0.5s ease 0s; */
+}
+
+/* h1._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+} */
+
+
+.name {
+	font-size: 2.8vw;
+	color: white;
+	font-family: "Dancing Script", cursive;
+	padding-left: 6vw;
+	padding-right: 6vw;
+	padding-bottom: 0;
+	margin-bottom: 0;
+/* 	transform: translate(0px, -120%);
+	opacity: 0;
+	transition: all 0.6s ease 0s; */
+}
+
+/* .name._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+} */
+
+
+p {
+	padding-left: 6vw;
+	padding-right: 6vw;
+	padding-bottom: 2vw;
+}
+
+
+li {
+	padding-left: 6vw;
+	padding-right: 6vw;
+	padding-bottom: 1.7vw;
+	transform: translate(0px, 1.5vw);
+	opacity: 0;
+	transition: all 0.3s cubic-bezier(.47,.17,.3,1);
+}
+
+li._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+
+h2{
+	padding-top: 5vw;
+	padding-bottom: 2vw;
+	font-size: 1.9vw;
+	padding-left: 6vw;
+	padding-right: 6vw;
+}
+
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Фотокарточки                                     */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.photoline {
+	width: 100%;
+	display: flex;
+	padding: 2vw 2vw 0vw 2vw;
+}
+
+
+.slidephoto {
+	height: 38vw;
+	margin: 0 1.6vw;
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	border-radius: 2.5vw;
+	transition: all 0.7s;
+	background-color: rgb(243, 243, 243); /*пока грузится изображение*/
+}
+
+ /* .slidephoto:hover {
+	transform: scale(1.1);
+	margin: 0 6vw;
+}  */
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Порядок работы                                   */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.steps {
+	margin: 0vw 2vw;
+	padding: 4vw 2vw 4vw 2vw ;
+	display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.step1 {
+  transform: translate(-4vw, 0vw);
+	opacity: 0;
+	transition: all 0.4s cubic-bezier(.47,.17,.3,1);
+}
+
+.step1._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+.step2 {
+  transform: translate(-8vw, 0vw);
+	opacity: 0;
+	transition: all 0.4s cubic-bezier(.47,.17,.3,1);
+}
+
+.step2._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+.step3 {
+  transform: translate(-12vw, 0vw);
+	opacity: 0;
+	transition: all 0.6s cubic-bezier(.47,.17,.3,1);
+}
+
+.step3._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+
+.step4 {
+  transform: translate(-16vw, 0vw);
+	opacity: 0;
+	transition: all 0.6s cubic-bezier(.47,.17,.3,1);
+}
+
+.step4._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+.step5 {
+  transform: translate(-20vw, 0vw);
+	opacity: 0;
+	transition: all 1s cubic-bezier(.47,.17,.3,1);
+}
+
+.step5._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+.arrow1 {
+  transform: translate(-6vw, 0vw);
+	opacity: 0;
+	transition: all 0.3s cubic-bezier(.47,.17,.3,1);
+}
+
+.arrow1._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+.arrow2 {
+  transform: translate(-8vw, 0vw);
+	opacity: 0;
+	transition: all 0.4s cubic-bezier(.47,.17,.3,1.06);
+}
+
+.arrow2._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+.arrow3 {
+  transform: translate(-12vw, 0vw);
+	opacity: 0;
+	transition: all 0.6s cubic-bezier(.47,.17,.3,1);
+}
+
+.arrow3._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+.arrow4 {
+  transform: translate(-16vw, 0vw);
+	opacity: 0;
+	transition: all 0.8s cubic-bezier(.47,.17,.3,1);
+}
+
+.arrow4._active {
+	transform: translate(0vw, 0vw);
+	opacity: 1;
+}
+
+.step img {
+	width: 4vw;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.step {
+	width: 15vw;
+	display: block;
+	text-align: center;
+}
+
+.arrow {
+	display: block;
+	text-align: center;
+}
+
+.arrow img {
+	padding-top: 5vw;
+  	padding-bottom: 1.5vw;
+	width: 2vw;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.step p {
+	padding: 2vw  2vw 0 2vw ;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Блок с ценами                                    */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circles div{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 35s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles div:nth-child(1){
+    left: 25%;
+    width: 7vw;
+    height: 7vw;
+    animation-delay: 0s;
+}
+
+
+.circles div:nth-child(2){
+    left: 10%;
+    width: 1vw;
+    height: 1vw;
+    animation-delay: 2s;
+    animation-duration: 18s;
+}
+
+.circles div:nth-child(3){
+    left: 70%;
+    width: 1.2vw;
+    height: 1.2vw;
+    animation-delay: 7s;
+}
+
+.circles div:nth-child(4){
+    left: 40%;
+    width: 3vw;
+    height: 3vw;
+    animation-delay: 0s;
+    animation-duration: 25s;
+}
+
+.circles div:nth-child(5){
+    left: 65%;
+    width: 2vw;
+    height: 2vw;
+    animation-delay: 0s;
+}
+
+.circles div:nth-child(6){
+    left: 75%;
+    width: 4vw;
+    height: 4vw;
+    animation-delay: 5s;
+}
+
+.circles div:nth-child(7){
+    left: 35%;
+    width: 5vw;
+    height: 5vw;
+    animation-delay: 12s;
+}
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.boxprice {
+   	background: linear-gradient(-45deg, #BA8969, #9c5f3b, #1b42a7, #ac7151);
+	background-size: 400% 400%;
+	/* animation: gradient 7s ease infinite; */
+	height: 50vw;
+	position: relative;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.boxprice h2 {
+	color: #fff;
+}
+
+.boxprice p {
+	color: #fff;
+	padding: 0;
+}
+
+
+
+.price {
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.tab {
+	width: 100%;
+	height: 3vw;
+}
+
+.pricefree {
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	margin-bottom: 4vw;
+	justify-content: center;
+	font-size: 2vw;
+/* 	line-height: 3vw; */
+	z-index:5;
+	position: relative;
+	    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.pricefree a {
+	color: #fff;
+}
+
+.price1, .price2, .price3 {
+	padding: 2vw 6vw;
+	border-radius: 2.5vw;
+    border: solid 0.25vw #ffffff;
+	margin-bottom: 4vw;
+	width: 25vw;
+}
+
+.price1 p{
+	text-align: center;
+}
+
+.price2 p{
+	text-align: center;
+}
+
+.price3 p{
+	text-align: center;
+}
+
+
+span {
+	font-size: 4vw;
+	color: #ffffff;
+}
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Слайдер с темами                                 */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.themes {
+	width: 100%;
+	display: flex;
+	padding: 0vw 3.5vw 0vw 3.5vw;
+}
+
+.slide {
+	height: 32vw;
+	margin: 1vw; 
+	color: #fff;
+	flex: 1.1;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	transition: all 1300ms cubic-bezier(.47,.17,.3,1);
+	filter: grayscale(100%);
+	border-radius: 2.5vw;
+	opacity: 0.6;
+	background-color: rgb(239, 239, 239);
+}
+
+.slide:hover {
+	filter: none;
+}
+
+.slide h3 {
+	position: absolute;
+	font-size: 2vw;
+	bottom: 2vw;
+	left: 3vw;
+	margin: 0;
+	transition: all 1.3s cubic-bezier(.47,.17,.3,1);
+   	transform: translate(9vw, 0vw);
+  	opacity: 0;
+}
+  
+.slide.active {
+	flex: 10;
+	filter: none;
+	opacity: 1;
+	
+}
+
+.slide.active h3 {
+	opacity: 1;
+	transform: translate(0vw, 0vw);
+}
+
+h3 {
+	color: white;
+	text-shadow: 0px 0px 40px #000000;
+}
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Нижний блок                                      */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+footer {
+	width: 100%;
+	height: 8vw;
+	display: flex;
+	text-align: center;
+	margin-top: 3.5vw;
+	justify-content: center;
+	background: linear-gradient(-45deg, #BA8969, #9c5f3b, #1b42a7, #ac7151);
+	background-size: 400% 400%;
+	position: relative;
+	user-select: none;
+}
+
+@keyframes gradient {
+0% {
+	background-position: 0% 50%;
+}
+50% {
+	background-position: 100% 50%;
+}
+100% {
+	background-position: 0% 50%;
+}
+}
+
+
+.footerlink {
+	font-size: 2vw;
+	color: white;
+	font-family: "Dancing Script", cursive;
+	align-self: center;
+	align-items: center;
+}
+
+
+.svg path {
+  height: 2vw;
+  fill: transparent;
+  stroke-width: 30;
+  stroke: #fff;
+  stroke-dasharray: 1550;
+  stroke-dashoffset: 0;
+  transition: all 0.5s cubic-bezier(.47,.17,.3,1);
+}
+
+footer:hover .svg path {
+  animation: animate-svg 4s linear forwards
+}
+
+@keyframes animate-svg
+{
+   0%
+  {
+    stroke-dashoffset: 0;
+  }
+   40%
+  {
+    stroke-dashoffset: 1550;
+  }
+   80%
+  {
+    stroke-dashoffset: 3100;
+    fill:transparent;
+  }
+   100%
+  {
+    stroke-dashoffset: 3100;
+    fill:#fff;
+  }
+}
+
+
+/* .cursor1 {
+	position: fixed;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #b9b9b98c;
+	transform: translate(-50%,-50%);
+	pointer-events: 
+;
+	z-index: 100;
+	transition: 100ms;
+}
+
+.cursor2 {
+	position: fixed;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #b9b9b98c;
+	transition: 110ms;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	z-index: 100;
+}
+
+.cursor3 {
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #e7e7e725;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	z-index: 99;
+	transition: 120ms;
+}
+
+.cursor4 {
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #e7e7e725;
+	transition: 130ms;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	z-index: 99;
+} */
+
+
+.links a:hover ~ .cursor{
+	transform: scale(3)
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	z-index: 4;
+	display: none; /*полоса прокрутки*/
+	}
+	
+::-webkit-scrollbar-track {
+	background-color: #ffffff00;
+	border-radius: 2px;
+	z-index: 4;
+	}
+	
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background: linear-gradient(180deg, #00c6fb, #bb7343);
+	z-index: 4;
+	}
+
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/* Адаптив для теефона                              */
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+/* 576px 
+@media screen  and (max-width: 576px) {
+
+	p {
+		line-height: 6vw;
+	}
+
+	nav {
+		font-size: 3vw;
+		height: 12vw;
+	}
+	
+	.logo {
+		font-size: 7vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.photo {
+		display: none;
+	}
+	
+	.photoDiv {
+		display: none;
+	}
+	
+	.offer {
+		margin-top: 10vw;
+		height: 70vw;
+		width: 100%;
+		text-align: center;
+	}
+	
+	h1 {
+		font-size: 4vw;
+	}
+	
+	.name {
+		font-size: 7vw;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 2vw;
+	}
+
+	.linkOut{
+		display: none;
+	}
+
+h2{
+	padding-top: 10vw;
+	font-size: 5vw;
+}
+
+.slidephoto {
+	height: 36vw;
+	margin: 0 2vw;
+}
+
+.slide {
+	height: 60vw;
+}
+
+p {
+	font-size: 4vw;
+	padding-top: 4vw;
+}
+
+.steps {
+	display: none;
+}
+
+
+.slide h3 {
+	font-size: 4vw;
+}
+
+
+.linkWhite:after {
+	height: 4vw;
+}
+
+.pricefree {
+	margin-bottom: 2vw;
+	padding-top: 5vw;
+	font-size: 4vw;
+	line-height: 6vw;
+}
+
+.pricefree br{
+	display: none;
+}
+
+.pricefree ul{
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+}
+
+.boxprice {
+	height: 70vw;
+}
+
+.price1, .price2, .price3 {
+	padding: 2vw 6vw;
+	border-radius: 2.5vw;
+  border: solid 0.2vw #ffffff;
+	margin-bottom: 4vw;
+	width: 30vw;
+}
+
+footer {
+	height: 18vw;
+}
+
+.footerlink {
+	font-size: 2vw;
+}
+
+
+
+/* 
+.cursor1{
+	display: none;
+}
+.cursor2{
+	display: none;
+}
+.cursor3{
+	display: none;
+}
+.cursor4{
+	display: none;
+}
+
+}
+
+*/
